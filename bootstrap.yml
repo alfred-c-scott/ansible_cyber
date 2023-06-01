@@ -23,3 +23,9 @@
       name: whois, tmux
       
     when: ansible_distribution == "Ubuntu"
+
+
+- hosts: Ubuntu
+  name: clone repositories
+  # https://github.com/CiscoCXSecurity/enum4linux.git
+  when: ansible_distribution == "Ubuntu"
