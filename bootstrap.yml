@@ -1,43 +1,40 @@
 ---
 # non functional - just adding common packages for workstations
 # will add packages later
-- hosts: Ubuntu
-    name: update repository cache - ubuntu
+- hosts: kali
+    name: update repository cache - Kali
       apt:
       
-    when: ansible_distribution == "Ubuntu"
+    when: ansible_distribution == "Kali"
 
 
-- hosts: Ubuntu
+- hosts: kali
     name: add reopositories to keyring
       # brave browser
       # razer
       apt:
     
-    when: ansible_distribution == "Ubuntu"
+    when: ansible_distribution == "Kali"
     
+- hosts: kali
+    name: clone SecList
     
-- hosts: Ubuntu
-    name: wget metasploit
-    # wget http://downloads.metasploit.com/data/releases/metasploit-latest-linux-x64-installer.run
-    when: ansible_distribution == "Ubuntu"
-    
-- hosts: Ubuntu
+- hosts: kali
     name: command to install metasploit
     become: true
     
-    when: ansible_distribution == "Ubnutnu"
+    when: ansible_distribution == "Kali"
 
 
-- hosts: Ubuntu
+- hosts: kali
     name: install packages - Ubuntu
     apt:
-      name: whois, tmux, smbclient, curl
+      name: whois, tmux, smbclient, curl, default-mysql-client
       
-    when: ansible_distribution == "Ubuntu"
+    when: ansible_distribution == "Kali"
 
 
-- hosts: Ubuntu
+- hosts: kali
   name: clone repositories
   # https://github.com/CiscoCXSecurity/enum4linux.git
-  when: ansible_distribution == "Ubuntu"
+  when: ansible_distribution == "Kali"
