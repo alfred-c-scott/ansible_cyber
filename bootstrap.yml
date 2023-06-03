@@ -15,6 +15,18 @@
       apt:
     
     when: ansible_distribution == "Ubuntu"
+    
+    
+- hosts: Ubuntu
+    name: wget metasploit
+    # wget http://downloads.metasploit.com/data/releases/metasploit-latest-linux-x64-installer.run
+    when: ansible_distribution == "Ubuntu"
+    
+- hosts: Ubuntu
+    name: command to install metasploit
+    become: true
+    
+    when: ansible_distribution == "Ubnutnu"
 
 
 - hosts: Ubuntu
