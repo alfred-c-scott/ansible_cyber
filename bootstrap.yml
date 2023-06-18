@@ -29,7 +29,7 @@
 - hosts: kali
     name: install packages - Ubuntu
     apt:
-      name: whois, tmux, smbclient, curl, default-mysql-client
+      name: whois, tmux, smbclient, curl, default-mysql-client, net-tools
       
     when: ansible_distribution == "Kali"
 
